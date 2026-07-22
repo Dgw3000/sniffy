@@ -3,25 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#f5efe5">
-  <meta name="description" content="Sniffy – satirische Offline-Party-App mit Countdowns und lokaler Rangliste. APK direkt herunterladen.">
-  <meta property="og:title" content="Sniffy – satirische Party-App">
-  <meta property="og:description" content="Offline, ohne Tracking und ohne Berechtigungen. Für Android herunterladen oder im Browser testen.">
+  <meta name="theme-color" content="#f4efe5">
+  <meta name="description" content="Sniffy – die satirische Offline-Party-App mit fiktiven Zentimeterlinien, Countdowns und lokaler Rangliste.">
+  <meta property="og:title" content="Sniffy – maßloser Quatsch in Zentimetern">
+  <meta property="og:description" content="Keine echte Dosierung. Keine Cloud. Nur fiktive Linien, dramatische Countdowns und ein Männchen mit Schneeschaufel.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dgw3000.github.io/sniffy/">
   <link rel="icon" href="assets/app-icon.png">
   <link rel="stylesheet" href="style.css">
-  <title>Sniffy – Android-App herunterladen</title>
+  <script src="download-counter.js" defer></script>
+  <title>Sniffy – Satirische Party-App herunterladen</title>
 </head>
+
 <body>
   <header class="site-header">
     <a class="brand" href="./" aria-label="Sniffy Startseite">
       <img src="assets/app-icon.png" alt="" width="48" height="48">
       <span>SNIFFY</span>
     </a>
+
     <nav aria-label="Hauptnavigation">
-      <a href="#funktionen">Funktionen</a>
-      <a href="#installation">Installation</a>
+      <a href="#was-ist-das">Was ist das?</a>
+      <a href="#download">Download</a>
       <a href="privacy.html">Datenschutz</a>
       <a href="https://github.com/Dgw3000/sniffy">Quellcode</a>
     </nav>
@@ -30,67 +33,221 @@
   <main>
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">OFFLINE · OPEN SOURCE · REINE SATIRE</p>
-        <h1>Die verdächtigste Zentimeterrechnung des Abends.</h1>
-        <p class="lead">Sniffy erzeugt Spaßnamen, fiktive Display-Linien, sequenzielle Countdowns und eine lokale Top-3-Rangliste. Keine Cloud. Kein Tracking. Keine echte Dosierungsberechnung.</p>
-        <div class="actions">
-          <a class="button primary" href="download/Sniffy.apk" download>APK herunterladen</a>
-          <a class="button secondary" href="demo/">Im Browser testen</a>
+        <p class="eyebrow">OFFLINE · OPEN SOURCE · WISSENSCHAFTLICH ÄUSSERST FRAGWÜRDIG</p>
+
+        <h1>Die maßloseste Zentimeterrechnung seit Erfindung des Lineals.</h1>
+
+        <p class="lead">
+          Sniffy nimmt ein paar harmlose Personendaten, vergibt respektlose Spaßnamen,
+          legt fiktive Linien auf den Bildschirm und inszeniert daraus eine dramatische
+          Countdown-Show. Bei null räumt ein kleines Männchen den ganzen Unsinn mit der
+          Schneeschaufel weg.
+        </p>
+
+        <p class="hero-joke">
+          Endlich eine App, die aus Körpergröße, Alter und Gruppendynamik exakt das berechnet,
+          was wissenschaftlich längst widerlegt wäre – wenn es jemals jemand behauptet hätte.
+        </p>
+
+        <div id="download" class="platform-actions">
+          <a
+            id="android-download"
+            class="platform-button android"
+            href="https://github.com/Dgw3000/sniffy/releases/latest/download/Sniffy.apk"
+          >
+            <span class="platform-icon" aria-hidden="true">🤖</span>
+            <span>
+              <small>Jetzt erhältlich für</small>
+              <strong>Android herunterladen</strong>
+            </span>
+          </a>
+
+          <div class="platform-button ios disabled" aria-disabled="true">
+            <span class="platform-icon" aria-hidden="true">🍎</span>
+            <span>
+              <small>Apfel poliert noch die Schaufel</small>
+              <strong>iOS · Kommt bald</strong>
+            </span>
+          </div>
         </div>
+
+        <div class="download-stat" aria-live="polite">
+          <span class="counter-dot" aria-hidden="true"></span>
+          <div>
+            <strong id="download-count">Downloadzähler lädt …</strong>
+            <span id="download-caption">Gezählt werden ausschließlich APK-Downloads aus GitHub Releases.</span>
+          </div>
+        </div>
+
         <div class="version-row">
           <span>Version 1.2.1</span>
           <span>Android 6+</span>
-          <span>24 KB</span>
+          <span>Keine Berechtigungen</span>
+          <span>Kein Netzwerkzugriff</span>
         </div>
       </div>
+
       <div class="phone" aria-label="Vorschau der Sniffy-App">
         <div class="phone-top"></div>
         <div class="phone-screen">
-          <div class="mini-head"><span>👃</span><b>SNIFFY</b><span>🏆</span></div>
-          <p class="mini-kicker">SNIFFY-GRUPPENERGEBNIS</p>
-          <h2>Die Runde steht</h2>
-          <div class="mini-stage">
-            <div><span>Graf Nasenberg</span><b>7,4 cm</b><i style="width:72%"></i></div>
-            <div><span>Captain Schnief</span><b>5,8 cm</b><i style="width:57%"></i></div>
-            <div><span>Dr. Puderzucker</span><b>4,1 cm</b><i style="width:42%"></i></div>
+          <div class="mini-head">
+            <span aria-hidden="true">👃</span>
+            <b>SNIFFY</b>
+            <span aria-hidden="true">🏆</span>
           </div>
+
+          <p class="mini-kicker">HEUTIGE FORSCHUNGSGRUPPE</p>
+          <h2>Die Lage ist vermessen.</h2>
+
+          <div class="mini-stage">
+            <div>
+              <span>Graf Nasenberg</span>
+              <b>7,4 cm</b>
+              <i style="width:72%"></i>
+            </div>
+            <div>
+              <span>Captain Schnief</span>
+              <b>5,8 cm</b>
+              <i style="width:57%"></i>
+            </div>
+            <div>
+              <span>Dr. Puderzucker</span>
+              <b>4,1 cm</b>
+              <i style="width:42%"></i>
+            </div>
+          </div>
+
           <button type="button" disabled>COUNTDOWNS STARTEN</button>
+
+          <p class="mini-disclaimer">
+            100 % erfundene Spielwerte.<br>
+            0 % medizinische Bedeutung.
+          </p>
         </div>
       </div>
     </section>
 
     <section class="satire-note" aria-label="Satirehinweis">
-      <strong>Satirehinweis</strong>
-      <p>Die Zentimeterwerte sind erfundene Spielwerte. Sniffy berechnet keine Stoffmenge, Verträglichkeit, Wirkung oder Konsumempfehlung.</p>
+      <strong>Keine Panik, Herr Doktor.</strong>
+      <p>
+        Sniffy berechnet keine Stoffmenge, Verträglichkeit, Wirkung oder Konsumempfehlung.
+        Sämtliche Zentimeterwerte sind erfundene Spielwerte und dienen ausschließlich der Satire.
+      </p>
     </section>
 
-    <section id="funktionen" class="section">
-      <p class="eyebrow">FUNKTIONEN</p>
-      <h2>Quatsch mit klaren technischen Grenzen.</h2>
-      <div class="feature-grid">
-        <article><span>01</span><h3>Mehrpersonen-Modus</h3><p>Personenzahl wählen, Profile anlegen und automatisch Spaßnamen erzeugen.</p></article>
-        <article><span>02</span><h3>Display-Linien</h3><p>Alle fiktiven Zentimeterlinien erscheinen gleichzeitig auf dem Bildschirm.</p></article>
-        <article><span>03</span><h3>Countdown-Show</h3><p>Jede Linie zählt nacheinander von fünf bis null herunter und wird animiert weggeräumt.</p></article>
-        <article><span>04</span><h3>Lokale Rangliste</h3><p>Freiwillige Namen oder Aliase und ihre addierten Spielwerte bleiben nur auf deinem Gerät.</p></article>
-        <article><span>05</span><h3>Vollständig offline</h3><p>Keine Konten, keine Server, keine Analyse-SDKs und keine Netzwerkberechtigung.</p></article>
-        <article><span>06</span><h3>Freie Software</h3><p>Der Quellcode ist öffentlich und steht unter GPL-3.0-only.</p></article>
-      </div>
-    </section>
-
-    <section id="installation" class="section install-section">
+    <section id="was-ist-das" class="section intro-section">
       <div>
-        <p class="eyebrow">INSTALLATION</p>
-        <h2>Direkt auf Android installieren.</h2>
-        <ol>
-          <li>Auf „APK herunterladen“ tippen.</li>
-          <li>Die heruntergeladene Datei öffnen.</li>
-          <li>Falls Android danach fragt, die Installation aus dieser Quelle für den Browser erlauben.</li>
-          <li>„Installieren“ auswählen.</li>
-        </ol>
-        <p class="fineprint">Bei Updates müssen Paketname und Signaturschlüssel unverändert bleiben. Die lokale Rangliste bleibt dann erhalten.</p>
+        <p class="eyebrow">WAS MACHT SNIFFY?</p>
+        <h2>Ein Gruppenexperiment ohne wissenschaftlichen Beirat.</h2>
       </div>
+
+      <div class="intro-copy">
+        <p>
+          Du wählst die Personenzahl und trägst pro Person Geschlecht, Gewicht, Größe und Alter ein.
+          Sniffy erfindet daraus einen Spaßnamen und eine sichtbar dargestellte, vollständig fiktive
+          Zentimeterlinie.
+        </p>
+        <p>
+          Alle Linien erscheinen gleichzeitig. Danach starten die Countdowns nacheinander bei fünf.
+          Bei null schiebt das digitale Schaufelmännchen die jeweilige Linie aus dem Bild. Echte Namen
+          oder Aliase können freiwillig lokal gespeichert werden; die Zentimeter werden in der
+          Wochen- und Monatsrangliste addiert.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">DIE KERNKOMPETENZEN</p>
+      <h2>Große Zahlen, kleine Verantwortung.</h2>
+
+      <div class="feature-grid">
+        <article>
+          <span>01</span>
+          <h3>Mehrpersonen-Modus</h3>
+          <p>Bis zu acht Forschungsobjekte gleichzeitig – ein Ethikrat wurde vorsorglich nicht eingeladen.</p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>Fiktive Zentimeter</h3>
+          <p>Die Linien sehen überzeugend aus, besitzen aber ungefähr so viel pharmakologische Relevanz wie ein Zollstock im Horoskop.</p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>Countdown-Drama</h3>
+          <p>Fünf Sekunden Spannung pro Linie. Danach übernimmt der kleinste Winterdienst der Welt.</p>
+        </article>
+
+        <article>
+          <span>04</span>
+          <h3>Lokale Top 3</h3>
+          <p>Namen, Aliase und Spielwerte bleiben auf deinem Gerät. Niemand im Internet muss wissen, wer Graf Nasenberg ist.</p>
+        </article>
+
+        <article>
+          <span>05</span>
+          <h3>Vollständig offline</h3>
+          <p>Keine Konten, keine Cloud, keine Werbung, keine Analyse-SDKs und keine heimlichen Ferngläser.</p>
+        </article>
+
+        <article>
+          <span>06</span>
+          <h3>Freie Software</h3>
+          <p>Der Quellcode ist öffentlich. Fehler, Unsinn und Schaufeltechnik können also unabhängig begutachtet werden.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section platforms">
+      <div class="platform-card android-card">
+        <p class="eyebrow">ANDROID</p>
+        <h2>Bereit zum Schaufeln.</h2>
+        <p>
+          Die APK funktioniert vollständig offline und benötigt keine Android-Berechtigungen.
+          Beim ersten Installieren muss dein Browser eventuell als Installationsquelle erlaubt werden.
+        </p>
+        <a
+          class="button primary"
+          href="https://github.com/Dgw3000/sniffy/releases/latest/download/Sniffy.apk"
+          data-android-download
+        >
+          Sniffy.apk herunterladen
+        </a>
+        <small>Android 6 oder neuer · Paket de.dgw3000.sniffy</small>
+      </div>
+
+      <div class="platform-card ios-card">
+        <div class="soon-badge">KOMMT BALD</div>
+        <p class="eyebrow">iOS</p>
+        <h2>Apple zählt noch bis fünf.</h2>
+        <p>
+          Die iOS-Version ist vorbereitet. Bis Veröffentlichung und Signierung abgeschlossen sind,
+          bleibt die Schneeschaufel im Cupertino-Geräteschuppen.
+        </p>
+        <span class="button muted-button" aria-disabled="true">iOS-Version in Vorbereitung</span>
+        <small>Kein Erscheinungstermin versprochen. Das wäre zu seriös.</small>
+      </div>
+    </section>
+
+    <section class="section install-section">
+      <div>
+        <p class="eyebrow">INSTALLATION AUF ANDROID</p>
+        <h2>Vier Schritte bis zur fragwürdigen Forschung.</h2>
+        <ol>
+          <li>Auf „Android herunterladen“ tippen.</li>
+          <li>Die heruntergeladene Datei <code>Sniffy.apk</code> öffnen.</li>
+          <li>Falls Android nachfragt, die Installation aus dieser Quelle für den Browser erlauben.</li>
+          <li>„Installieren“ auswählen und den wissenschaftlichen Ruf vorübergehend ablegen.</li>
+        </ol>
+        <p class="fineprint">
+          Bei Updates müssen Paketname und Signaturschlüssel unverändert bleiben.
+          Dann bleiben auch lokal gespeicherte Rankings erhalten.
+        </p>
+      </div>
+
       <aside class="tech-card">
-        <h3>Technische Prüfung</h3>
+        <h3>Technische Angaben</h3>
         <dl>
           <div><dt>Paket</dt><dd>de.dgw3000.sniffy</dd></div>
           <div><dt>Version</dt><dd>1.2.1</dd></div>
@@ -98,26 +255,35 @@
           <div><dt>Ziel-API</dt><dd>36</dd></div>
           <div><dt>Berechtigungen</dt><dd>keine</dd></div>
           <div><dt>Netzwerkzugriff</dt><dd>nein</dd></div>
+          <div><dt>Lizenz</dt><dd>GPL-3.0</dd></div>
         </dl>
+
         <p class="hash-label">SHA-256</p>
         <code>7ccaf9857a96a326dab618cb640bffb43de0a58035b77451f06a49d2fca99ba4</code>
-        <a href="checksums.txt">Prüfsumme als Text</a>
+        <a href="checksums.txt">Prüfsumme als Text anzeigen</a>
       </aside>
     </section>
 
     <section class="section cta">
-      <p class="eyebrow">KEINE INSTALLATION GEWÜNSCHT?</p>
-      <h2>Sniffy läuft auch direkt im Browser.</h2>
-      <p>Die Browser-Demo speichert Ranglisten ebenfalls nur lokal im Browser.</p>
-      <a class="button primary" href="demo/">Browser-Demo öffnen</a>
+      <p class="eyebrow">NOCH NICHT ÜBERZEUGT?</p>
+      <h2>Erst im Browser unseriös werden.</h2>
+      <p>
+        Die Browser-Demo läuft ohne Installation. Lokale Testdaten bleiben ausschließlich in deinem Browser.
+      </p>
+      <a class="button secondary" href="demo/">Browser-Demo öffnen</a>
     </section>
   </main>
 
   <footer>
-    <div><b>Sniffy</b><span>Satirisches Offline-Partyspiel</span></div>
+    <div>
+      <b>Sniffy</b>
+      <span>Satirisches Offline-Partyspiel ohne pharmakologischen Erkenntnisgewinn.</span>
+    </div>
+
     <nav>
       <a href="privacy.html">Datenschutz</a>
       <a href="https://github.com/Dgw3000/sniffy">Quellcode</a>
+      <a href="https://github.com/Dgw3000/sniffy/releases">Versionen</a>
       <a href="https://github.com/Dgw3000/sniffy/blob/main/LICENSE">GPL-3.0</a>
     </nav>
   </footer>
