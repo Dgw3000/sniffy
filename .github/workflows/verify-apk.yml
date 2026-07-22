@@ -1,0 +1,22 @@
+name: Verify APK
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify SHA-256
+        run: sha256sum -c SHA256SUMS
+      - name: Inspect APK archive
+        run: unzip -t docs/download/Sniffy-v1.2.1.apk
+      - name: Ensure stable download matches versioned APK
+        run: cmp docs/download/Sniffy.apk docs/download/Sniffy-v1.2.1.apk

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f5efe5">
+  <meta name="description" content="Sniffy ist ein rein satirischer Liniengenerator mit lokaler Spaß-Rangliste.">
+  <title>Sniffy – Browser-Demo</title>
+  <link rel="icon" href="app-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="app-shell">
+  <header class="topbar">
+    <button id="homeBtn" class="brand" type="button"><span class="nose-logo">👃</span><span>SNIFFY</span></button>
+    <div class="top-actions">
+      <button id="rankingBtn" class="round-btn" type="button" aria-label="Ranking öffnen">🏆</button>
+      <button id="aboutBtn" class="round-btn" type="button" aria-label="Informationen öffnen">i</button>
+    </div>
+  </header>
+
+  <section id="peopleScreen" class="screen active">
+    <div class="paper-card intro-card">
+      <p class="kicker">SCHRITT 1 VON 3</p>
+      <h1>Wie groß ist die Runde?</h1>
+      <p class="lead">Wähle zuerst die Personenzahl. Danach bekommt jede Person ein völlig unwissenschaftliches Profil.</p>
+    </div>
+    <div class="paper-card form-card">
+      <label>Personenanzahl</label>
+      <div class="people-control">
+        <button id="peopleDown" type="button">−</button>
+        <output id="peopleValue">2</output>
+        <span>Personen</span>
+        <button id="peopleUp" type="button">+</button>
+      </div>
+      <button id="toProfiles" class="primary" type="button">PERSONEN ANLEGEN</button>
+      <p class="microcopy">1–8 Personen · reine Satire · keine echte Mengen-, Verträglichkeits- oder Risikoberechnung</p>
+    </div>
+  </section>
+
+  <section id="profilesScreen" class="screen">
+    <button class="back-btn" data-back="peopleScreen" type="button">← Personenzahl ändern</button>
+    <div class="paper-card intro-card compact">
+      <p class="kicker">SCHRITT 2 VON 3</p>
+      <h1>Wer ist dabei?</h1>
+      <p class="lead">Geschlecht, Gewicht, Größe und Alter erzeugen nur einen erfundenen Spaßnamen und eine satirische Zentimeterzahl.</p>
+    </div>
+    <form id="profilesForm">
+      <div id="profileCards" class="profile-cards"></div>
+      <button class="primary sticky-action" type="submit">SPASSNAMEN VERGEBEN</button>
+    </form>
+  </section>
+
+  <section id="reviewScreen" class="screen">
+    <button class="back-btn" data-back="profilesScreen" type="button">← Angaben bearbeiten</button>
+    <div class="paper-card intro-card compact">
+      <p class="kicker">SCHRITT 3 VON 3</p>
+      <h1>Die verdächtige Runde</h1>
+      <p class="lead">Jeder Spaßname kann einem echten Namen zugeordnet werden. Bleibt das Feld leer, wird der Spaßname selbst als Alias gespeichert.</p>
+    </div>
+    <datalist id="knownNames"></datalist>
+    <div id="reviewList" class="review-list"></div>
+    <button id="calculateBtn" class="primary sticky-action" type="button">LINIEN BERECHNEN</button>
+  </section>
+
+  <section id="resultScreen" class="screen result-screen">
+    <div class="result-head">
+      <p class="kicker">SNIFFY-GRUPPENERGEBNIS</p>
+      <h2>Die Runde steht</h2>
+      <p id="groupSummary"></p>
+    </div>
+
+    <div class="paper-card measurement-card">
+      <span class="result-label">SATIRISCHE DISPLAY-LINIEN IN CM</span>
+      <p class="result-note">Alle Linien sind gleichzeitig sichtbar. Nach dem Start zählt jede Linie nacheinander von 5 bis 0 herunter.</p>
+      <div id="lineStage" class="line-stage">
+        <div class="surface-glare"></div>
+        <div id="sequenceStatus" class="sequence-status">Alle Linien liegen bereit</div>
+        <div id="powderLines" class="powder-lines"></div>
+        <div class="screen-scale"><span>Zentimeterdarstellung</span><span id="lineCountLabel"></span></div>
+      </div>
+      <p class="calibration-note">Die Länge wird proportional mit CSS-Zentimetern dargestellt. Je nach Displaykalibrierung kann die physische Größe geringfügig abweichen.</p>
+      <button id="animateBtn" class="secondary" type="button">COUNTDOWNS STARTEN</button>
+    </div>
+
+    <div id="resultCards" class="result-cards"></div>
+    <button id="finishSaveBtn" class="primary finish-save" type="button">FERTIG UND SPEICHERN</button>
+    <p id="saveStatus" class="save-status" aria-live="polite"></p>
+    <div class="button-grid">
+      <button id="shareBtn" class="primary" type="button">TEILEN</button>
+      <button id="againBtn" class="secondary" type="button">NEUE RUNDE</button>
+    </div>
+    <p class="satire-stamp">SATIRE · KEINE DOSIERUNG · KEINE KONSUMEMPFEHLUNG</p>
+  </section>
+
+  <section id="rankingScreen" class="screen ranking-screen">
+    <button id="rankingBack" class="back-btn" type="button">← Zurück</button>
+    <div class="paper-card intro-card compact">
+      <p class="kicker">LOKALE SNIFFY-RANGLISTE</p>
+      <h1>Top 3</h1>
+      <p class="lead">Gezählt werden ausschließlich freiwillig eingegebene Namen. Die Daten verlassen dieses Gerät nicht.</p>
+    </div>
+    <div class="period-tabs" role="tablist" aria-label="Ranking-Zeitraum">
+      <button id="weekTab" class="period-tab active" type="button">DIESE WOCHE</button>
+      <button id="monthTab" class="period-tab" type="button">DIESER MONAT</button>
+    </div>
+    <p id="periodSubtitle" class="period-subtitle"></p>
+    <div id="rankingList" class="ranking-list"></div>
+    <button id="clearRankingBtn" class="text-btn danger" type="button">Lokale Rangliste löschen</button>
+  </section>
+
+  <dialog id="aboutDialog">
+    <button id="closeAbout" class="dialog-close" type="button">×</button>
+    <h2>Was ist Sniffy?</h2>
+    <p>Eine Humor-App mit automatisch erzeugten Spaßnamen, Fantasiewerten und einer rein lokalen Rangliste.</p>
+    <p>Gewicht, Größe, Alter und Geschlecht verändern nur eine erfundene Zentimeterformel. Es werden keine echten Stoffmengen, Verträglichkeiten oder Risiken berechnet.</p>
+    <p>Eingegebene Namen oder automatisch verwendete Spaßnamen sowie Zentimeterwerte werden erst nach „Fertig und speichern“ ausschließlich im lokalen App-Speicher abgelegt.</p>
+    <button id="dialogOk" class="primary" type="button">VERSTANDEN</button>
+  </dialog>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

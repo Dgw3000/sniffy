@@ -1,0 +1,9 @@
+Sniffy ist ein vollständig offline funktionierendes satirisches Partyspiel.
+
+Nach Auswahl der Personenzahl werden freiwillige Profildaten eingegeben. Daraus erzeugt Sniffy automatisch Spaßnamen und rein fiktive Zentimeterwerte. Alle Linien erscheinen gleichzeitig, bevor sequenzielle Countdowns und eine kleine Schaufelanimation starten.
+
+Namen oder Aliase und Zentimeterwerte können anschließend lokal gespeichert und in einer Wochen- oder Monatsrangliste angezeigt werden.
+
+Die angezeigten Werte besitzen keinerlei medizinische, pharmakologische oder dosierungsbezogene Bedeutung. Sniffy berechnet keine Stoffmenge, Verträglichkeit oder Konsumempfehlung.
+
+Keine Werbung, kein Tracking, keine Netzwerkberechtigung und keine Cloud-Dienste.

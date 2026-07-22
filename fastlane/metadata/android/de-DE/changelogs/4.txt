@@ -1,0 +1,1 @@
+Installation auf aktuellen Android-Versionen korrigiert, Ziel-API aktualisiert und APK-Signierung verbessert.

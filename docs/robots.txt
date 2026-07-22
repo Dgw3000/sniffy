@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dgw3000.github.io/sniffy/sitemap.xml

@@ -1,0 +1,25 @@
+Categories:
+  - Games
+License: GPL-3.0-only
+AuthorName: Dgw3000
+SourceCode: https://github.com/Dgw3000/sniffy
+IssueTracker: https://github.com/Dgw3000/sniffy/issues
+AutoName: Sniffy
+RepoType: git
+Repo: https://github.com/Dgw3000/sniffy.git
+
+# NOTE: This template is not ready for submission until the Android build can be
+# reproduced by Gradle from source on F-Droid's build servers.
+#
+# Builds:
+#   - versionName: 1.2.1
+#     versionCode: 4
+#     commit: v1.2.1
+#     subdir: android
+#     gradle:
+#       - yes
+#
+# AutoUpdateMode: Version
+# UpdateCheckMode: Tags
+# CurrentVersion: 1.2.1
+# CurrentVersionCode: 4

@@ -1,0 +1,9 @@
+{
+  "name":"Sniffy – Satirischer Liniengenerator",
+  "short_name":"Sniffy",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#f5efe5",
+  "theme_color":"#f5efe5",
+  "description":"Rein satirischer Generator erfundener Zentimeterlinien mit lokaler Spaß-Rangliste."
+}

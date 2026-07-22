@@ -1,0 +1,9 @@
+Sniffy is a fully offline satirical party game.
+
+After choosing the number of players, optional profile values generate comedy aliases and entirely fictional centimetre scores. All lines are shown together before sequential countdowns and a small shovel animation begin.
+
+Names or aliases and scores can be saved locally and shown in weekly or monthly rankings.
+
+The displayed values have no medical, pharmacological or dosage-related meaning. Sniffy does not calculate substance amounts, tolerance or consumption recommendations.
+
+No advertising, tracking, network permission or cloud services.

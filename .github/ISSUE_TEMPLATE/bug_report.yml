@@ -1,0 +1,34 @@
+name: Fehler melden
+description: Technischen Fehler in Sniffy melden
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Bitte keine privaten oder sensiblen Daten eintragen.
+  - type: input
+    id: version
+    attributes:
+      label: Sniffy-Version
+      placeholder: z. B. 1.2.1
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Gerät und Android-Version
+      placeholder: z. B. Samsung S23, Android 16
+  - type: textarea
+    id: steps
+    attributes:
+      label: Schritte zum Fehler
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Erwartetes Verhalten
+  - type: textarea
+    id: actual
+    attributes:
+      label: Tatsächliches Verhalten

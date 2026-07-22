@@ -1,0 +1,1 @@
+Fixed installation on current Android versions, updated target API and improved APK signing.
