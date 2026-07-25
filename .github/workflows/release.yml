@@ -16,7 +16,7 @@ jobs:
       - name: Verify APK
         run: |
           sha256sum -c SHA256SUMS
-          cmp docs/download/Sniffy.apk docs/download/Sniffy-v1.2.1.apk
+          cmp docs/download/Sniffy.apk docs/download/Sniffy-v1.3.0.apk
       - name: Create release and upload APK
         env:
           GH_TOKEN: ${{ github.token }}

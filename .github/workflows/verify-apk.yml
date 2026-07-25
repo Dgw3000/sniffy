@@ -17,6 +17,6 @@ jobs:
       - name: Verify SHA-256
         run: sha256sum -c SHA256SUMS
       - name: Inspect APK archive
-        run: unzip -t docs/download/Sniffy-v1.2.1.apk
+        run: unzip -t docs/download/Sniffy-v1.3.0.apk
       - name: Ensure stable download matches versioned APK
-        run: cmp docs/download/Sniffy.apk docs/download/Sniffy-v1.2.1.apk
+        run: cmp docs/download/Sniffy.apk docs/download/Sniffy-v1.3.0.apk
