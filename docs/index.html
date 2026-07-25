@@ -1,273 +1,252 @@
 <!doctype html>
-<html lang="de">
+<!DOCTYPE html>
+
+<html dir="ltr" lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#09090c">
-  <meta name="description" content="Technoschlampe.de – alles mit Musik und/oder Technik. Nichts mit Geschlecht.">
-  <meta property="og:title" content="Technoschlampe.de">
-  <meta property="og:description" content="Alles mit Musik und/oder Technik. Nichts mit Geschlecht.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://technoschlampe.de/">
-  <meta property="og:image" content="https://technoschlampe.de/assets/og-card.svg">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
-  <script src="site.js?v=1" defer></script>
-  <title>Technoschlampe.de – Musik, Technik und kontrollierter Kontrollverlust</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#f4efe5" name="theme-color"/>
+<meta content="Sniffy – die satirische Offline-Party-App mit fiktiven Zentimeterlinien, Countdowns und lokaler Rangliste." name="description"/>
+<meta content="Sniffy – maßloser Quatsch in Zentimetern" property="og:title"/>
+<meta content="Keine echte Dosierung. Keine Cloud. Nur fiktive Linien, dramatische Countdowns und ein Männchen mit Schneeschaufel." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://dgw3000.github.io/sniffy/" property="og:url"/>
+<link href="assets/app-icon.png" rel="icon"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="site.js"></script>
+<title>Sniffy – Satirische Party-App herunterladen</title>
 </head>
 <body>
-  <a class="skip-link" href="#main">Zum Inhalt</a>
+<header class="site-header">
+<a aria-label="Sniffy Startseite" class="brand" href="./">
+<img alt="" height="48" src="assets/app-icon.png" width="48"/>
+<span>SNIFFY</span>
+</a>
 
-  <header class="site-header">
-    <a class="brand" href="./" aria-label="Technoschlampe Startseite">
-      <span class="brand-mark" aria-hidden="true">
-        <i></i><i></i><i></i><i></i><i></i>
-      </span>
-      <span class="brand-text">
-        <b>TECHNO</b><em>SCHLAMPE</em>
-      </span>
-    </a>
-
-    <nav aria-label="Hauptnavigation">
-      <a href="#manifest">Manifest</a>
-      <a href="#projekte">Projekte</a>
-      <a href="#bedeutung">Der Name</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-  </header>
-
-  <main id="main">
-    <section class="hero">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-noise" aria-hidden="true"></div>
-
-      <div class="hero-copy">
-        <p class="kicker">MUSIK · TECHNIK · NACHTLEBEN · OPEN SOURCE</p>
-        <h1>
-          Alles mit
-          <span>Musik</span>
-          und/oder
-          <span>Technik.</span>
-        </h1>
-        <p class="hero-line">Nichts mit Geschlecht.</p>
-
-        <p class="hero-intro">
-          Technoschlampe.de ist ein selbstironischer Ort für elektronische Musik,
-          Clubkultur, Software, digitale Experimente und Projekte, die niemand
-          bestellt hat – die aber trotzdem gebaut werden mussten.
+<div class="header-controls"><nav aria-label="Hauptnavigation">
+<a data-i18n="nav.what" href="#was-ist-das">Was ist das?</a>
+<a data-i18n="nav.download" href="#download">Download</a>
+<a data-i18n="nav.privacy" href="privacy.html">Datenschutz</a>
+<a data-i18n="nav.source" href="https://github.com/Dgw3000/sniffy">Quellcode</a>
+</nav><label class="language-picker" for="language-select"><span aria-hidden="true" class="language-globe">🌐</span><select aria-label="Sprache auswählen" id="language-select"><option value="de">Deutsch</option><option value="en">English</option><option value="fr">Français</option><option value="es">Español</option><option value="it">Italiano</option><option value="pt">Português</option><option value="nl">Nederlands</option><option value="uk">Українська</option><option value="pl">Polski</option><option value="tr">Türkçe</option><option value="ar">العربية</option></select></label></div></header>
+<main>
+<section class="hero">
+<div class="hero-copy">
+<p class="eyebrow" data-i18n="hero.eyebrow">OFFLINE · OPEN SOURCE · WISSENSCHAFTLICH ÄUSSERST FRAGWÜRDIG</p>
+<h1 data-i18n="hero.title">Die maßloseste Zentimeterrechnung seit Erfindung des Lineals.</h1>
+<p class="lead" data-i18n="hero.lead">
+          Sniffy nimmt ein paar harmlose Personendaten, vergibt respektlose Spaßnamen,
+          legt fiktive Linien auf den Bildschirm und inszeniert daraus eine dramatische
+          Countdown-Show. Bei null räumt ein kleines Männchen den ganzen Unsinn mit der
+          Schneeschaufel weg.
         </p>
-
-        <div class="hero-actions">
-          <a class="button primary" href="#projekte">Aktuelles Projekt</a>
-          <a class="button ghost" href="#bedeutung">Was soll der Name?</a>
-        </div>
-
-        <div class="status-strip" aria-label="Status">
-          <span><i class="status-dot"></i> Online</span>
-          <span>Geschlechtsneutral</span>
-          <span>Basskompatibel</span>
-          <span>Debug-Modus aktiv</span>
-        </div>
-      </div>
-
-      <div class="hero-visual" aria-label="Abstrakte Club- und Technikgrafik">
-        <div class="orb orb-one"></div>
-        <div class="orb orb-two"></div>
-        <div class="deck">
-          <div class="deck-header">
-            <span>TS-01</span>
-            <span>132 BPM</span>
-          </div>
-          <div class="waveform" aria-hidden="true">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-          </div>
-          <div class="deck-center">
-            <div class="record"><span></span></div>
-            <div class="deck-data">
-              <p>TRACK</p>
-              <b>CONTROLLED CHAOS</b>
-              <small>TECHNO / CODE / SATIRE</small>
-            </div>
-          </div>
-          <div class="deck-footer">
-            <span>PLAYING</span>
-            <div class="progress"><i></i></div>
-            <span>04:20</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="manifest" class="section manifest">
-      <div class="section-label">01 / MANIFEST</div>
-      <div class="manifest-copy">
-        <h2>Zwischen Bassdrum, Bildschirm und schlechten Entscheidungen.</h2>
-        <p>
-          Hier treffen drückende Kicks auf Quellcode, verschwitzte Keller auf
-          saubere Builds und Clubhumor auf technische Neugier. Technoschlampe.de
-          ist weder Musikmagazin noch Softwarefirma – sondern die Schnittmenge,
-          in der beides interessanter wird.
+<p class="hero-joke" data-i18n="hero.joke">
+          Endlich eine App, die aus Körpergröße, Alter und Gruppendynamik exakt das berechnet,
+          was wissenschaftlich längst widerlegt wäre – wenn es jemals jemand behauptet hätte.
         </p>
-      </div>
-
-      <div class="manifest-grid">
-        <article>
-          <span>01</span>
-          <h3>Musik</h3>
-          <p>Techno, elektronische Musik, Sets, Maschinen, Klang und die Frage, welcher Floor wirklich besser war.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>Technik</h3>
-          <p>Apps, Software, Hardware, digitale Werkzeuge und Dinge, deren Existenz erst nach dem dritten Kaffee plausibel wird.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Satire</h3>
-          <p>Selbstironie statt Szenepolizei. Übertreibung statt Hochglanz. Die Restwürde bleibt an der Garderobe.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="projekte" class="section projects">
-      <div class="section-label">02 / PROJEKTE</div>
-
-      <div class="project-head">
-        <div>
-          <p class="eyebrow">JETZT VERFÜGBAR</p>
-          <h2>Sniffy</h2>
-        </div>
-        <div class="project-tag">SATIRISCHE PARTY-APP</div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-copy">
-          <p class="project-lead">
-            Die maßloseste Zentimeterrechnung seit Erfindung des Lineals.
+<div class="platform-actions" id="download">
+<a class="platform-button android" href="https://github.com/Dgw3000/sniffy/releases/latest/download/Sniffy.apk" id="android-download">
+<span aria-hidden="true" class="platform-icon">🤖</span>
+<span>
+<small data-i18n="hero.androidSmall">Jetzt erhältlich für</small>
+<strong data-i18n="hero.androidButton">Android herunterladen</strong>
+</span>
+</a>
+<div aria-disabled="true" class="platform-button ios disabled">
+<span aria-hidden="true" class="platform-icon">🍎</span>
+<span>
+<small data-i18n="hero.iosSmall">Apfel poliert noch die Schaufel</small>
+<strong data-i18n="hero.iosButton">iOS · Kommt bald</strong>
+</span>
+</div>
+</div>
+<div aria-live="polite" class="download-stat">
+<span aria-hidden="true" class="counter-dot"></span>
+<div>
+<strong data-i18n="counter.loading" id="download-count">Downloadzähler lädt …</strong>
+<span data-i18n="counter.caption" id="download-caption">Gezählt werden ausschließlich APK-Downloads aus GitHub Releases.</span>
+</div>
+</div>
+<div class="version-row">
+<span data-i18n="meta.version">Version 1.3.0</span>
+<span data-i18n="meta.android">Android 6+</span>
+<span data-i18n="meta.permissions">Keine Berechtigungen</span>
+<span data-i18n="meta.network">Kein Netzwerkzugriff</span>
+</div>
+</div>
+<div aria-label="Vorschau der Sniffy-App" class="phone">
+<div class="phone-top"></div>
+<div class="phone-screen">
+<div class="mini-head">
+<span aria-hidden="true">👃</span>
+<b>SNIFFY</b>
+<span aria-hidden="true">🏆</span>
+</div>
+<p class="mini-kicker" data-i18n="phone.kicker">HEUTIGE FORSCHUNGSGRUPPE</p>
+<h2 data-i18n="phone.title">Die Lage ist vermessen.</h2>
+<div class="mini-stage">
+<div>
+<span>Graf Nasenberg</span>
+<b>7,4 cm</b>
+<i style="width:72%"></i>
+</div>
+<div>
+<span>Captain Schnief</span>
+<b>5,8 cm</b>
+<i style="width:57%"></i>
+</div>
+<div>
+<span>Dr. Puderzucker</span>
+<b>4,1 cm</b>
+<i style="width:42%"></i>
+</div>
+</div>
+<button data-i18n="phone.button" disabled="" type="button">COUNTDOWNS STARTEN</button>
+<p class="mini-disclaimer" data-i18n-html="phone.disclaimer">
+            100 % erfundene Spielwerte.<br/>
+            0 % medizinische Bedeutung.
           </p>
-          <p>
-            Sniffy erzeugt fiktive Display-Linien, automatische Spaßnamen,
-            sequenzielle Countdowns und eine lokale Top-3-Rangliste. Bei null
-            räumt ein kleines Männchen mit einer Schneeschaufel auf.
-          </p>
-
-          <div class="satire-warning">
-            <strong>Reine Satire.</strong>
-            <span>Keine echte Dosierungsberechnung, keine medizinische Aussage und keine Konsumempfehlung.</span>
-          </div>
-
-          <div class="platform-buttons">
-            <a
-              id="android-download"
-              class="store-button android"
-              href="https://github.com/Dgw3000/sniffy/releases/latest/download/Sniffy.apk"
-            >
-              <span class="store-icon" aria-hidden="true">◉</span>
-              <span><small>JETZT LADEN</small><b>Android APK</b></span>
-            </a>
-
-            <div class="store-button ios disabled" aria-disabled="true">
-              <span class="store-icon" aria-hidden="true">●</span>
-              <span><small>IN VORBEREITUNG</small><b>iOS · Kommt bald</b></span>
-            </div>
-          </div>
-
-          <div class="download-counter" aria-live="polite">
-            <span class="pulse" aria-hidden="true"></span>
-            <div>
-              <strong id="download-count">Downloadzähler lädt …</strong>
-              <small id="download-caption">Gezählt werden APK-Downloads aus GitHub Releases.</small>
-            </div>
-          </div>
-
-          <div class="project-links">
-            <a href="https://github.com/Dgw3000/sniffy">Quellcode</a>
-            <a href="https://github.com/Dgw3000/sniffy/releases">Alle Versionen</a>
-            <a href="https://dgw3000.github.io/sniffy/demo/">Browser-Demo</a>
-          </div>
-        </div>
-
-        <div class="project-phone">
-          <div class="phone-shell">
-            <div class="phone-notch"></div>
-            <div class="phone-screen">
-              <div class="phone-head">
-                <span>👃</span><b>SNIFFY</b><span>🏆</span>
-              </div>
-              <p class="phone-kicker">HEUTIGE FORSCHUNGSGRUPPE</p>
-              <h3>Die Lage ist vermessen.</h3>
-              <div class="line-stage">
-                <div><span>Graf Nasenberg</span><b>7,4 cm</b><i style="width:78%"></i></div>
-                <div><span>Captain Schnief</span><b>5,8 cm</b><i style="width:61%"></i></div>
-                <div><span>Dr. Puderzucker</span><b>4,1 cm</b><i style="width:44%"></i></div>
-              </div>
-              <button type="button" disabled>COUNTDOWNS STARTEN</button>
-              <small>100 % erfundene Spielwerte</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="bedeutung" class="section meaning">
-      <div class="section-label">03 / DER NAME</div>
-      <div class="meaning-grid">
-        <div>
-          <p class="eyebrow">KLARE SACHE</p>
-          <h2>Technoschlampe ist kein Geschlecht. Technoschlampe ist ein Betriebszustand.</h2>
-        </div>
-        <div class="meaning-copy">
-          <p>
-            „Technoschlampe“ wird hier ausdrücklich geschlechtsneutral verwendet.
-            Gemeint sind Menschen, die sich hemmungslos für Techno, elektronische
-            Musik, Clubkultur, Software, Geräte oder digitale Experimente begeistern.
-          </p>
-          <p>
-            Weiblich, männlich, divers oder noch im Beta-Test: entscheidend sind
-            Musikgeschmack, Neugier und ein leicht gestörtes Verhältnis zu Uhrzeiten.
-          </p>
-          <blockquote>
-            Alles mit Musik und/oder Technik. Nichts mit Geschlecht.
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <section class="section values">
-      <div class="section-label">04 / GRUNDSÄTZE</div>
-      <div class="values-list">
-        <div><span>01</span><p>Keine Werbung. Kein Tracking. Keine versteckten Analyse-SDKs.</p></div>
-        <div><span>02</span><p>Offener Quellcode, nachvollziehbare Builds und ehrliche technische Angaben.</p></div>
-        <div><span>03</span><p>Humor darf derb sein. Menschen müssen es nicht abbekommen.</p></div>
-        <div><span>04</span><p>Musik und Technik sind für alle Geschlechter da – schlechte Wortspiele ebenfalls.</p></div>
-      </div>
-    </section>
-
-    <section id="kontakt" class="section contact">
-      <div class="contact-card">
-        <p class="eyebrow">KONTAKT / PROJEKTE / FEEDBACK</p>
-        <h2>Du hast Musik, Technik oder eine absurd gute Idee?</h2>
-        <p>
-          Fehlerberichte, Projektideen, Kritik und andere digitale Nebenwirkungen
-          können über GitHub gemeldet werden.
+</div>
+</div>
+</section>
+<section aria-label="Satirehinweis" class="satire-note">
+<strong data-i18n="satire.title">Keine Panik, Herr Doktor.</strong>
+<p data-i18n="satire.body">
+        Sniffy berechnet keine Stoffmenge, Verträglichkeit, Wirkung oder Konsumempfehlung.
+        Sämtliche Zentimeterwerte sind erfundene Spielwerte und dienen ausschließlich der Satire.
+      </p>
+</section>
+<section class="section intro-section" id="was-ist-das">
+<div>
+<p class="eyebrow" data-i18n="intro.eyebrow">WAS MACHT SNIFFY?</p>
+<h2 data-i18n="intro.title">Ein Gruppenexperiment ohne wissenschaftlichen Beirat.</h2>
+</div>
+<div class="intro-copy">
+<p data-i18n="intro.p1">
+          Du wählst die Personenzahl und trägst pro Person Geschlecht, Gewicht, Größe und Alter ein.
+          Sniffy erfindet daraus einen Spaßnamen und eine sichtbar dargestellte, vollständig fiktive
+          Zentimeterlinie.
         </p>
-        <a class="button primary" href="https://github.com/Dgw3000/sniffy/issues">GitHub Issues öffnen</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-brand">
-      <b>TECHNOSCHLAMPE.DE</b>
-      <span>Alles mit Musik und/oder Technik. Nichts mit Geschlecht.</span>
-    </div>
-    <nav>
-      <a href="privacy.html">Datenschutz</a>
-      <a href="impressum.html">Impressum</a>
-      <a href="https://github.com/Dgw3000/sniffy">GitHub</a>
-    </nav>
-  </footer>
+<p data-i18n="intro.p2">
+          Alle Linien erscheinen gleichzeitig. Danach starten die Countdowns nacheinander bei fünf.
+          Bei null schiebt das digitale Schaufelmännchen die jeweilige Linie aus dem Bild. Echte Namen
+          oder Aliase können freiwillig lokal gespeichert werden; die Zentimeter werden in der
+          Wochen- und Monatsrangliste addiert.
+        </p>
+</div>
+</section>
+<section class="section">
+<p class="eyebrow" data-i18n="features.eyebrow">DIE KERNKOMPETENZEN</p>
+<h2 data-i18n="features.title">Große Zahlen, kleine Verantwortung.</h2>
+<div class="feature-grid">
+<article>
+<span>01</span>
+<h3 data-i18n="features.multiTitle">Mehrpersonen-Modus</h3>
+<p data-i18n="features.multiBody">Bis zu acht Forschungsobjekte gleichzeitig – ein Ethikrat wurde vorsorglich nicht eingeladen.</p>
+</article>
+<article>
+<span>02</span>
+<h3 data-i18n="features.linesTitle">Fiktive Zentimeter</h3>
+<p data-i18n="features.linesBody">Die Linien sehen überzeugend aus, besitzen aber ungefähr so viel pharmakologische Relevanz wie ein Zollstock im Horoskop.</p>
+</article>
+<article>
+<span>03</span>
+<h3 data-i18n="features.countdownTitle">Countdown-Drama</h3>
+<p data-i18n="features.countdownBody">Fünf Sekunden Spannung pro Linie. Danach übernimmt der kleinste Winterdienst der Welt.</p>
+</article>
+<article>
+<span>04</span>
+<h3 data-i18n="features.rankingTitle">Lokale Top 3</h3>
+<p data-i18n="features.rankingBody">Namen, Aliase und Spielwerte bleiben auf deinem Gerät. Niemand im Internet muss wissen, wer Graf Nasenberg ist.</p>
+</article>
+<article>
+<span>05</span>
+<h3 data-i18n="features.offlineTitle">Vollständig offline</h3>
+<p data-i18n="features.offlineBody">Keine Konten, keine Cloud, keine Werbung, keine Analyse-SDKs und keine heimlichen Ferngläser.</p>
+</article>
+<article>
+<span>06</span>
+<h3 data-i18n="features.opensourceTitle">Freie Software</h3>
+<p data-i18n="features.opensourceBody">Der Quellcode ist öffentlich. Fehler, Unsinn und Schaufeltechnik können also unabhängig begutachtet werden.</p>
+</article>
+</div>
+</section>
+<section class="section platforms">
+<div class="platform-card android-card">
+<p class="eyebrow" data-i18n="platform.androidBody">ANDROID</p>
+<h2 data-i18n="platform.androidTitle">Bereit zum Schaufeln.</h2>
+<p>
+          Die APK funktioniert vollständig offline und benötigt keine Android-Berechtigungen.
+          Beim ersten Installieren muss dein Browser eventuell als Installationsquelle erlaubt werden.
+        </p>
+<a class="button primary" data-android-download="" data-i18n="platform.androidButton" href="https://github.com/Dgw3000/sniffy/releases/latest/download/Sniffy.apk">
+          Sniffy.apk herunterladen
+        </a>
+<small data-i18n="platform.androidMeta">Android 6 oder neuer · Paket de.dgw3000.sniffy</small>
+</div>
+<div class="platform-card ios-card">
+<div class="soon-badge" data-i18n="platform.soon">KOMMT BALD</div>
+<p class="eyebrow" data-i18n="platform.iosBody">iOS</p>
+<h2 data-i18n="platform.iosTitle">Apple zählt noch bis fünf.</h2>
+<p>
+          Die iOS-Version ist vorbereitet. Bis Veröffentlichung und Signierung abgeschlossen sind,
+          bleibt die Schneeschaufel im Cupertino-Geräteschuppen.
+        </p>
+<span aria-disabled="true" class="button muted-button" data-i18n="platform.iosButton">iOS-Version in Vorbereitung</span>
+<small data-i18n="platform.iosMeta">Kein Erscheinungstermin versprochen. Das wäre zu seriös.</small>
+</div>
+</section>
+<section class="section install-section">
+<div>
+<p class="eyebrow" data-i18n="install.eyebrow">INSTALLATION AUF ANDROID</p>
+<h2 data-i18n="install.title">Vier Schritte bis zur fragwürdigen Forschung.</h2>
+<ol>
+<li data-i18n="install.one">Auf „Android herunterladen“ tippen.</li>
+<li data-i18n-html="install.two">Die heruntergeladene Datei <code>Sniffy.apk</code> öffnen.</li>
+<li data-i18n="install.three">Falls Android nachfragt, die Installation aus dieser Quelle für den Browser erlauben.</li>
+<li data-i18n="install.four">„Installieren“ auswählen und den wissenschaftlichen Ruf vorübergehend ablegen.</li>
+</ol>
+<p class="fineprint" data-i18n="install.note">
+          Bei Updates müssen Paketname und Signaturschlüssel unverändert bleiben.
+          Dann bleiben auch lokal gespeicherte Rankings erhalten.
+        </p>
+</div>
+<aside class="tech-card">
+<h3 data-i18n="tech.title">Technische Angaben</h3>
+<dl>
+<div><dt data-i18n="tech.package">Paket</dt><dd data-i18n="tech.packageValue">de.dgw3000.sniffy</dd></div>
+<div><dt data-i18n="tech.version">Version</dt><dd data-i18n="tech.versionValue">1.3.0</dd></div>
+<div><dt data-i18n="tech.android">Android</dt><dd data-i18n="tech.androidValue">6 oder neuer</dd></div>
+<div><dt data-i18n="tech.api">Ziel-API</dt><dd data-i18n="tech.apiValue">36</dd></div>
+<div><dt data-i18n="tech.permissions">Berechtigungen</dt><dd data-i18n="tech.permissionsValue">keine</dd></div>
+<div><dt data-i18n="tech.network">Netzwerkzugriff</dt><dd data-i18n="tech.networkValue">nein</dd></div>
+<div><dt data-i18n="tech.license">Lizenz</dt><dd data-i18n="tech.licenseValue">GPL-3.0</dd></div>
+</dl>
+<p class="hash-label" data-i18n="tech.hash">SHA-256</p>
+<code>fab831adcd79a23b1e50e6c11354e33b6124313b5b74a76b47040e2e471287fa</code>
+<a data-i18n="tech.checksum" href="checksums.txt">Prüfsumme als Text anzeigen</a>
+</aside>
+</section>
+<section class="section cta">
+<p class="eyebrow" data-i18n="cta.eyebrow">NOCH NICHT ÜBERZEUGT?</p>
+<h2 data-i18n="cta.title">Erst im Browser unseriös werden.</h2>
+<p data-i18n="cta.body">
+        Die Browser-Demo läuft ohne Installation. Lokale Testdaten bleiben ausschließlich in deinem Browser.
+      </p>
+<a class="button secondary" data-i18n="cta.button" href="demo/">Browser-Demo öffnen</a>
+</section>
+</main>
+<footer>
+<div>
+<b>Sniffy</b>
+<span data-i18n="footer.tagline">Satirisches Offline-Partyspiel ohne pharmakologischen Erkenntnisgewinn.</span>
+</div>
+<nav>
+<a data-i18n="footer.privacy" href="privacy.html">Datenschutz</a>
+<a data-i18n="footer.source" href="https://github.com/Dgw3000/sniffy">Quellcode</a>
+<a data-i18n="footer.versions" href="https://github.com/Dgw3000/sniffy/releases">Versionen</a>
+<a data-i18n="footer.license" href="https://github.com/Dgw3000/sniffy/blob/main/LICENSE">GPL-3.0</a>
+</nav>
+</footer>
 </body>
 </html>
